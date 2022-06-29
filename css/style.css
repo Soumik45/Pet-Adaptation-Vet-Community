@@ -19,76 +19,76 @@
   padding: 1%;
 }
 
-h2{
-   color: orangered;
-   margin-bottom: 2%;
+h2 {
+  color: orangered;
+  margin-bottom: 2%;
 }
 
-.img-responsive{
+.img-responsive {
   width: 100%;
 }
 
-.text-right{
+.text-right {
   text-align: right;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.clearfix{
+.clearfix {
   clear: both;
   float: none;
 }
 
-a{
+a {
   color: orangered;
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: red;
 }
 
-.btn{
+.btn {
   padding: 1%;
   border: none;
   font-size: 1rem;
   border-radius: 5px;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: orangered;
   color: white;
   cursor: pointer;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   color: white;
   background-color: red;
 }
 
-.img-curve{
+.img-curve {
   border-radius: 15px;
 }
 
 /* css for navbar section */
 
-.logo{
+.logo {
   width: 10%;
   /* for going to the left we are using it */
   float: left;
 }
 
-.menu{
+.menu {
   line-height: 60px;
 }
 
-.menu ul{
-  list-style-type: none ;
+.menu ul {
+  list-style-type: none;
 }
 
-.menu ul li{
+.menu ul li {
   display: inline;
   padding: 1%;
   font-weight: bold;
@@ -100,7 +100,7 @@ a:hover{
 
 /* CSS for pet search section */
 
-.pet-search{
+.pet-search {
   background-image: url(../images/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,7 +108,7 @@ a:hover{
   padding: 7% 0;
 }
 
-.pet-search input[type="search"]{
+.pet-search input[type="search"] {
   width: 50%;
   padding: 1%;
   font-size: 1rem;
@@ -117,51 +117,59 @@ a:hover{
 }
 
 /* CSS for  categories*/
-.categories{
+.categories {
   padding: 4% 0;
 }
 
-.box-3{
+.box-3 {
   /* border: 1px solid black; */
   width: 28%;
   float: left;
   margin: 2%;
 }
 
-.img-text{
+.img-text {
   /* position: absolute; */
   text-align: center;
 }
-.img-bg-1{
+
+.img-bg-1 {
   background-image: url(/images/1.jpg);
   background-position: center;
-} 
+}
 
-.img-bg-2{
+.img-bg-2 {
   background-image: url(/images/2.jpg);
   background-position: center;
-} 
+}
 
-.img-bg-3{
+.img-bg-3 {
   background-image: url(/images/3.jpg);
   background-position: center;
-} 
+}
 
-.text-orange{
+.text-orange {
   color: red;
 }
 
-h3{
+/* when clicked on a category
+.text-category{
+  background-color: white;
+  padding: %;
+} */
+
+h3 {
   padding: 5%;
   font-size: 1.5rem;
 }
 
 /* CSS for pet menu */
-.pet-menu{
-  background-color: whitesmoke;
+.pet-menu {
+  background-color: antiquewhite;
   /* padding: 4% 0;  */
 }
-.pet-menu-box{
+
+.pet-menu-box {
   border: 1px solid orangered;
   background-color: white;
   width: 42%;
@@ -171,90 +179,141 @@ h3{
   border-radius: 15px;
 }
 
-.pet-menu img{
+.pet-menu img {
   width: 20%;
   float: left;
 }
 
-.pet-menu-desc{
+.pet-menu-desc {
   width: 70%;
   float: left;
   margin-left: 8%;
 }
 
-.pet-location{
+.pet-location {
   font-size: 1.2rem;
   margin: 2% 0;
 }
 
-.pet-desc{
+.pet-desc {
   font-size: 1rem;
   color: #747d8c;
   /* margin: 1%; */
 }
 
-.social ul li{
+.social ul li {
   display: inline;
   padding: 1%;
 }
 
-.social-img{
+.social-img {
   width: 3%;
 }
 
+.categories-img {
+  border: none;
+}
 
+.mp-21 {
+  padding-bottom: 2%;
+  margin-bottom: 1%;
+}
+
+/* copied from an external source */
+
+/* for Adopt Section */
+
+.adopt {
+  width: 50%;
+  margin: 0% 25%;
+  background-color: white;
+  color: black;
+}
+
+.input-responsive {
+  width: 90%;
+  padding: 1.75%;
+  margin: 0 2%;
+  border: 1px orangered dotted;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.order-label {
+  margin: 0.5% auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.adopt-img {
+  width: 15%;
+}
+
+.btn-center {
+  padding: 1.5%;
+  margin-left: 40%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/*  */
 
 /* CSS for mobile size or smaller screen */
 
-@media only screen and (max-width:768px){
-  .logo{
+@media only screen and (max-width: 768px) {
+  .logo {
     width: 40%;
     margin: 1% auto;
     float: none;
   }
-  .menu ul{
+
+  .menu ul {
     text-align: center;
   }
-  .pet-search input[type="search"]{
+
+  .pet-search input[type="search"] {
     width: 90%;
     padding: 2%;
     margin-bottom: 5%;
-}
+  }
 
-.pet-search{
-  padding: 10% 0;
-}
+  .pet-search {
+    padding: 10% 0;
+  }
 
-.btn{
-  width: 91%;
-  padding: 2%;
-}
+  .btn {
+    width: 91%;
+    padding: 2%;
+  }
 
-h2{
-  margin-bottom: 10%;
-}
+  h2 {
+    margin-bottom: 10%;
+  }
 
-.box-3{
-  width: 95%;
-  margin: 4% auto;
-}
+  .box-3 {
+    width: 95%;
+    margin: 4% auto;
+  }
 
-.pet-menu{
-  padding: 20% 0;
-}
+  .pet-menu {
+    padding: 20% 0;
+  }
 
-.pet-menu-box{
-  width: 90%;
-  padding: 5%;
-  margin-bottom: 5%;
-}
+  .pet-menu-box {
+    width: 90%;
+    padding: 5%;
+    margin-bottom: 5%;
+  }
 
-.social{
-  padding: 5% 0;
-}
+  .social {
+    padding: 5% 0;
+  }
 
-.social-img{
-  width: 15%;
-}
-
+  .social-img {
+    width: 15%;
+  }
+/* center */
+  .btn-center{
+    margin: 2% 4.25%;
+  }
 }
