@@ -26,6 +26,7 @@ h2 {
 
 .img-responsive {
   width: 100%;
+  /* height: 80px; */
 }
 
 .text-right {
@@ -70,6 +71,7 @@ a:hover {
 
 .img-curve {
   border-radius: 15px;
+  /* width: 50%; */
 }
 
 /* css for navbar section */
@@ -173,6 +175,7 @@ h3 {
   border: 1px solid orangered;
   background-color: white;
   width: 42%;
+  height: 135px; /* added */
   margin: 1%;
   padding: 2%;
   float: left;
