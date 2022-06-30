@@ -1,0 +1,97 @@
+/* 
+    Author: MAS
+    Theme: Pet Adoption Site Admin Theme
+    version: 1.0;
+*/
+
+/* for removing default margin and padding */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* for containing and initial positioning */
+
+.wrapper {
+    /* border: 1px solid black; */
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: orangered;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+/* for navbar section */
+
+.menu {
+    line-height: 60px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+/* for main content section */
+
+.main-content {
+    margin: 1% 1%;
+}
+
+/* background image and background properties */
+
+.pet-background {
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+h3 {
+    color: red;
+}
+
+/* for the column */
+
+.col-4 {
+    width: 20%;
+    background-color: orangered;
+    margin: 1%;
+    padding: 4% 1%;
+    float: left;
+    /* text-decoration: white; */
+}
+
+.text-white {
+    color: white;
+}
+
+.all-caps {
+    text-transform: capitalize;
+}
+
+/* for clearing the float from the elements */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
