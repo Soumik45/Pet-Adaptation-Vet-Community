@@ -1,7 +1,9 @@
 <!-- 
-    writer: MAS
+    writer: us
  -->
-
+<?php
+include('../config/constants.php');
+?>
  <!-- <?php
   print("Hello World");
   ?> -->
