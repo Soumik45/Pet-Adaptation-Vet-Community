@@ -103,7 +103,7 @@ if(isset($_POST['submit']))
     if($res==true)
     {
        //create a session variable
-       $_SESSION['add']= "Admin Added" ;
+       $_SESSION['add']= "<div class='success'>Admin Added</div>" ;
        //redirect to manage admin page
        header("location:".SITEURL.'admin/manage-admin.php');
 
