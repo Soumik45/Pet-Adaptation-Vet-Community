@@ -28,6 +28,14 @@
     width: 40%;
 }
 
+.success{
+    color: #5352ed;
+    font-weight: bold;
+}
+.error{
+    color: #ff7f50;
+}
+
 table tr th {
     border-bottom: 1px solid gray;
     padding: 1%;
@@ -66,7 +74,7 @@ table tr td {
 
 .btn-ter{
     
-    background-color: #e21873;  
+    background-color: #e90b0b;  
     padding: 1%;
     color: white;
     text-decoration: none;
