@@ -23,6 +23,7 @@
 
 .tbl-full{
     width: 100%;
+    
 }
 .tbl-30{
     width: 40%;
@@ -48,7 +49,7 @@ table tr td {
 
 .btn-primary{
     
-    background-color: #1e90ff;
+    background-color: #3290e2;
     padding: 1%;
     color: white;
     text-decoration: none;

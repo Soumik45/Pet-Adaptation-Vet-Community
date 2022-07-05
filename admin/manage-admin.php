@@ -32,11 +32,31 @@
                
             }
 
+            if(isset($_SESSION['no_user']))
+            {
+               echo $_SESSION['no_user'] ;
+               unset($_SESSION['no_user']); //removing session
+               
+            }
+            if(isset($_SESSION['password_user2']))
+            {
+               echo $_SESSION['password_user2'] ;
+               unset($_SESSION['password_user2']); //removing session
+               
+            }
+            
+            if(isset($_SESSION['password_user']))
+            {
+               echo $_SESSION['password_user'] ;
+               unset($_SESSION['password_user']); //removing session
+               
+            }
+
             ?>
          <br>
 
 
-            <table class="tbl-full">
+            <table class="tbl-full" >
          <tr>
             <th>SI</th>
             <th>FullName</th>
@@ -70,6 +90,7 @@
                <td><?php echo $full_name ?></td>
                <td><?php echo $username ?></td>
                <td>
+                     <a href="<?php echo SITEURL; ?>admin/password-update.php?id=<?php echo $id; ?>" class="btn-primary">Change Password</a>
                      <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Admin</a>
                      <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-ter">Delete Admin</a>
                </td>
