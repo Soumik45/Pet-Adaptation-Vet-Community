@@ -25,7 +25,19 @@
 
   }
 
+
+
+  //img delete
+   if($img_name!="")
+    {
+        $path="../images/category/.$image_name" ; //img destination
+
+    }
+    remove= unlink($path);
+
+
 */
+
  ?>
 
  
