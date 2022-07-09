@@ -3,10 +3,13 @@
  -->
 <?php
 include('../config/constants.php');
+include('login-check.php');
 ?>
  <!-- <?php
   print("Hello World");
   ?> -->
+
+
  
   <!DOCTYPE html>
   <html lang="en">
@@ -29,6 +32,7 @@ include('../config/constants.php');
                  <li><a href="manage-category.php">Category</a></li>
                  <li><a href="manage-pet.php">Pet</a></li>
                  <li><a href="manage-adopt.php">Adopt</a></li>
+                 <li><a href="logout.php">Logout</a></li>
              </ul>
          </div>
      </div>

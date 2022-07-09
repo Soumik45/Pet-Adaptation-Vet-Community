@@ -11,6 +11,7 @@ if($res==true)
 
     //query is successful
    $_SESSION['delete']="<div class='success'>Admin is Deleted.</div>";
+  
    //redirect
    header("location:".SITEURL.'admin/manage-admin.php');
 

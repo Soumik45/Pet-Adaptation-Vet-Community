@@ -26,7 +26,12 @@
     
 }
 .tbl-30{
+    pad: 1dp;
     width: 40%;
+}
+.org-color{
+    color: #ff7f50;
+    font-weight: bold;
 }
 
 .success{
@@ -46,6 +51,7 @@ table tr td {
     padding: 1%;
     text-align: left;
 }
+
 
 .btn-primary{
     
@@ -161,4 +167,15 @@ h3 {
 .clearfix {
     float: none;
     clear: both;
+}
+
+
+
+
+
+.login{
+
+    border: 1px solid navy;
+    width: 25%;
+    margin: 10% auto;
 }
