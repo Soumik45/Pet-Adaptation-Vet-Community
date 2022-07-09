@@ -22,6 +22,21 @@
                
             }
 
+            if(isset($_SESSION['delete']))
+            {
+               print("\n");
+               echo $_SESSION['delete'] ;
+               unset($_SESSION['delete']); //removing session
+               
+            }
+            if(isset($_SESSION['img-delete']))
+            {
+               print("\n");
+               echo $_SESSION['img-delete'] ;
+               unset($_SESSION['img-delete']); //removing session
+               
+            }
+
             if(isset($_SESSION['upload']))
             {
                print("\n");
@@ -91,7 +106,7 @@
                                  <td>
                      
                      <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
-                     <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-ter">Delete Category</a>
+                     <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>& image_name=<?php echo $image_name;?>" class="btn-ter">Delete Category</a>
                </td>
                      </tr>
 
