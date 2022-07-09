@@ -60,9 +60,7 @@
 
 
 
-<?php
-        include("partials/footer.php")
-     ?>
+
 
 
 
@@ -126,3 +124,8 @@ if(isset($_POST['submit']))
 
 
 ?>
+
+
+<?php
+        include("partials/footer.php")
+     ?>

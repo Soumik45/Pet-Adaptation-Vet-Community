@@ -6,40 +6,124 @@
 <div class="main-content">
          <div class="wrapper text-center">
             <h3 class="text-center all-caps">Manage Category</h3>
-            <br>
+            <br> 
+            
+
 
              <!-- Button for new admin -->
-         <a href="#" class="btn-primary">Add Category</a>
-         <br>
+         <a href="<?php echo SITEURL ;?>admin/add-category.php" class="btn-primary">Add Category</a>
+         <br><br>
+         <?php
+            if(isset($_SESSION['add-cat']))
+            {
+               print("\n");
+               echo $_SESSION['add-cat'] ;
+               unset($_SESSION['add-cat']); //removing session
+               
+            }
+
+            if(isset($_SESSION['upload']))
+            {
+               print("\n");
+               echo $_SESSION['upload'] ;
+               unset($_SESSION['upload']); //removing session
+               
+            }
+
+
+            ?>
          <br>
             <table class="tbl-full">
          <tr>
             <th>SI</th>
-            <th>FullName</th>
-            <th>UserName</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Featured</th>
+            <th>Active</th>
             <th>Actions</th>
 
          </tr>
 
-         <tr>
-            <td>1</td>
-            <td>Soumik</td>
-            <td>Spj</td>
-            <td>
-            <a href="#" class="btn-secondary">Update Admin</a>
-            <a href="#" class="btn-ter">Delete Admin</a>
-         </td>
+         <?php
+         $sql="SELECT * FROM tbl_category ";
+         $res= mysqli_query($conn,$sql); //$conn is described in constants
+               if($res==true)
+               {
+                  $count = mysqli_num_rows($res);
+                  $sn=1;
+                  if($count>0)
+                  {
+                     while($rows=mysqli_fetch_assoc($res)){
 
-         </tr>
+                        $id= $rows['id'];
+                        $title=  $rows['title'];
+                        $image_name= $rows['image_name'];
+                        $featured= $rows['featured'];
+                        $active=$rows['active'];
 
-         <tr>
-            <td>2</td>
-            <td>Paul</td>
-            <td>Spj45</td>
-            <td><a href="#" class="btn-secondary">Update Admin</a>
-            <a href="#" class="btn-ter">Delete Admin</a> </td>
+                        ?>
 
-         </tr>
+                     <tr>
+                                  <td><?php echo $sn++ ?></td>
+                                  <td><?php echo $title ?></td>
+                                  <td><?php 
+                                  if($image_name!="")
+                                  {
+
+                                    ?>
+                                    <img src="<?php echo SITEURL;?>images/category/<?php echo $image_name;?>" width="150px" height="75px" >
+
+
+                                    <?php
+
+                                  }
+                                  else
+                                  {
+                                    echo "<div class='error'>No image selected </div>" ;
+                                  }
+                                  
+                                  
+                                  
+                                  ?></td>
+
+                                 <td><?php echo $featured ?></td>
+                                 <td><?php echo $active ?></td>
+                                 <td>
+                     
+                     <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
+                     <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-ter">Delete Category</a>
+               </td>
+                     </tr>
+
+
+                     <?php
+
+
+                     }
+                  }
+               }
+               else
+               {
+                  
+                  
+
+
+
+            
+               ?>
+
+                  <tr>
+                     <td colspan="6">No category</td>
+                  </tr>
+                  <?php
+                  
+               }
+
+
+
+         ?>
+
+         
 
 
             </table>
