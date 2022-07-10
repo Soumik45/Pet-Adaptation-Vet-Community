@@ -15,6 +15,13 @@
                unset($_SESSION['add-cat1']); //removing session
                
             }
+            if(isset($_SESSION['upload']))
+            {
+            print("\n");
+            echo $_SESSION['upload'] ;
+            unset($_SESSION['upload']); //removing session
+            
+            }
 
 
             ?>
@@ -73,6 +80,7 @@
 
 
 
+               
                 if(isset($_POST['submit']))
                 {
                    
@@ -110,9 +118,13 @@
                     $image_name = $_FILES['image']['name'];
                    
 
-
-                    //get extention
-                    $ext= end(explode('.',$image_name));//jpg,png
+                    //we can add category even if we don't upload an image
+                    if($image_name!="")
+                    
+                    {
+                        //this means image is available
+                        //get extention
+                        $ext= end(explode('.',$image_name));//jpg,png
                     $image_name="Pet_Category".rand(0,9999).'.'.$ext;
                     $source= $_FILES['image']['tmp_name'] ;
                     $destination ="../images/category/".$image_name ;
@@ -125,11 +137,18 @@
                     //checking upload
                     if($upload==false)
                     {
-                        $_SESSION['upload']= "<div class='error' >Something went wrong in image upload </div>" ;
+                        $_SESSION['upload']= "<div class='error' >Please Select an Image </div>" ;
                         header('location:'.SITEURL.'admin/add-category.php');
                         die(); //process will be stopped
 
                     }
+                    }
+                    
+                        else
+              {
+                $image_name="" ; 
+              }
+                    
               }
               else
               {
@@ -144,7 +163,7 @@
                          	title ='$title', image_name='$image_name',
                             featured='$featured', active='$active' " ;
 
-                            echo $sql ;
+                          //  echo $sql ;
 
                //now execute
                $res = mysqli_query($conn,$sql);

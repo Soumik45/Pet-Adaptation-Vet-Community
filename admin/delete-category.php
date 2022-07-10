@@ -1,6 +1,6 @@
 <?php
 include('../config/constants.php');
-if(isset($_GET['id']) && $_GET['image_name'] )
+if(isset($_GET['id']) && isset($_GET['image_name']) )
 {
     $id= $_GET['id'];
     $image_name= $_GET['image_name'] ;
