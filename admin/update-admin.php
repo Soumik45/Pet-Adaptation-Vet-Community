@@ -13,6 +13,8 @@
 
         <?php
         //get the id
+      if(isset($_GET['id']))
+      {
         $id= $_GET['id'];
        
         //sql query
@@ -40,6 +42,12 @@
 
 
         }
+      }
+      else
+      {
+        //without id you can't access update
+        header("location:".SITEURL.'admin/manage-admin.php');
+      }
 
 ?>
         <form action="" method="POST">

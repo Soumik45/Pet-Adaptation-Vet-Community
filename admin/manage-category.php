@@ -21,6 +21,7 @@
                unset($_SESSION['add-cat']); //removing session
                
             }
+            
 
             if(isset($_SESSION['delete']))
             {
@@ -36,14 +37,15 @@
                unset($_SESSION['img-delete']); //removing session
                
             }
-
-            if(isset($_SESSION['upload']))
+            if(isset($_SESSION['update-cat']))
             {
                print("\n");
-               echo $_SESSION['upload'] ;
-               unset($_SESSION['upload']); //removing session
+               echo $_SESSION['update-cat'] ;
+               unset($_SESSION['update-cat']); //removing session
                
             }
+
+            
 
 
             ?>
@@ -86,7 +88,7 @@
                                   {
 
                                     ?>
-                                    <img src="<?php echo SITEURL;?>images/category/<?php echo $image_name;?>" width="150px" height="75px" >
+                                    <img src="<?php echo SITEURL;?>images/category/<?php echo $image_name;?>" width="150px" height="100px" >
 
 
                                     <?php
@@ -105,8 +107,8 @@
                                  <td><?php echo $active ?></td>
                                  <td>
                      
-                     <a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
-                     <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>& image_name=<?php echo $image_name;?>" class="btn-ter">Delete Category</a>
+                     <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
+                     <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>& image_name=<?php echo $image_name;?>" class="btn-ter" >Delete Category</a>
                </td>
                      </tr>
 
