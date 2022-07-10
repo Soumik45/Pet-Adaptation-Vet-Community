@@ -212,7 +212,7 @@
                     }
                     if($_POST['cur_image']!="")
                    {
-                    $remove_path = ",,/images/category/".$_POST['cur_image'] ;
+                    $remove_path = "../images/category/".$_POST['cur_image'] ;
                     $remove = unlink($remove_path);
 
                    }

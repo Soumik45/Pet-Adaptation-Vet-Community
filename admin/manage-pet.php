@@ -14,12 +14,18 @@
          <a href="<?php echo SITEURL; //option use of siteurl?>admin/add-pet.php" class="btn-primary">Add Pet</a>
          <br>
          <br>
-         <br>
+         
             <?php
             if(isset($_SESSION['add-pet']))
             {
                echo $_SESSION['add-pet'] ;
                unset($_SESSION['add-pet']); //removing session
+               
+            }
+            if(isset($_SESSION['update-pet']))
+            {
+               echo $_SESSION['update-pet'] ;
+               unset($_SESSION['update-pet']); //removing session
                
             }
             if(isset($_SESSION['delete']))
