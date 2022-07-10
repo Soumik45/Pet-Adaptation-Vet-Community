@@ -124,7 +124,8 @@
                     {
                         //this means image is available
                         //get extention
-                        $ext= end(explode('.',$image_name));//jpg,png
+                        $ext2= explode('.',$image_name);//jpg,png
+                        $ext= end($ext2);
                     $image_name="Pet_Category".rand(0,9999).'.'.$ext;
                     $source= $_FILES['image']['tmp_name'] ;
                     $destination ="../images/category/".$image_name ;
