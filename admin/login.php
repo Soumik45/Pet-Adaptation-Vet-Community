@@ -30,11 +30,12 @@ include('../config/constants.php');
 			</div>
 
 			<div class="login">
-				<form>
+				<form action="" method="POST">
 					<label for="chk" aria-hidden="true">Sign Up</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Signup</button>
+					<input type="text" name="full_name" placeholder="Enter Your Name" required="">
+                    <input type="text" name="username" placeholder="Enter Your UserName" required="">
+					<input type="password" name="password" placeholder="Enter Your Password" required="">
+					<input type="submit" name="submit2" value="Sign Up" class="btn-pri">
 				</form>
 			</div>
 	</div>
@@ -53,7 +54,52 @@ include('../config/constants.php');
                 ?>
 
 </html>
+                <?php
+                    if(isset($_POST['submit2']))
+                    {
+                    
+                        //get data
+                        //header("location:".SITEURL.'admin/add-admin.php');
+                        $full_name= $_POST["full_name"];
+                        $username= $_POST["username"];
+                        $password= md5($_POST["password"]); //md5 for encryption
+                    
+                        //query
+                        $sql2= "INSERT INTO tbl_admin SET full_name= '$full_name', username= '$username', password= '$password' " ;
+                    
+                        
+                        //Execute query
+                        $res2= mysqli_query($conn,$sql2) ;
+                    
+                        //Data insertion Checking
+                        if($res2==true)
+                        {
+                           //create a session variable
+                           $_SESSION['add']= "<div class='success'>Admin Added</div>" ;
+                           $_SESSION['user'] = $username;
+                           //redirect to manage admin page
+                           header("location:".SITEURL.'admin/');
+                    
+                    
+                        }
+                        else
+                        {
+                            //failure will return to add admin
+                            $_SESSION['add']= "Failed to add Admin" ;
+                           //redirect to manage admin page
+                           header("location:".SITEURL.'admin/login.php');
+                    
+                        }
+                    
+                    
+                        
+                    
+                    }
+                    
+                    
 
+
+                ?>
 
 <?php
 //here comes login checking
