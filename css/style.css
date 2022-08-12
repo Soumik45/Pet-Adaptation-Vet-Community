@@ -175,7 +175,8 @@ h3 {
   border: 1px solid orangered;
   background-color: white;
   width: 42%;
-  height: 135px; /* added */
+  height: 135px;
+  /* added */
   margin: 1%;
   padding: 2%;
   float: left;
@@ -293,6 +294,18 @@ h3 {
     margin-bottom: 10%;
   }
 
+  .error {
+    margin-top: 2%;
+    padding: 2%;
+    color: red;
+  }
+
+  .success {
+    margin-top: 2%;
+    padding: 2%;
+    color: green;
+  }
+
   .box-3 {
     width: 95%;
     margin: 4% auto;
@@ -315,8 +328,9 @@ h3 {
   .social-img {
     width: 15%;
   }
-/* center */
-  .btn-center{
+
+  /* center */
+  .btn-center {
     margin: 2% 4.25%;
   }
 }

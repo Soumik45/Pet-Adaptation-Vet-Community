@@ -32,6 +32,7 @@ include('login-check.php');
                  <li><a href="manage-category.php">Category</a></li>
                  <li><a href="manage-pet.php">Pet</a></li>
                  <li><a href="manage-adopt.php">Adopt</a></li>
+                 <li><a href="helpline.php">Helpline</a></li>
                  <li><a href="logout.php">Logout</a></li>
              </ul>
          </div>
