@@ -21,24 +21,27 @@
     margin: 0 auto;
 }
 
-.tbl-full{
+.tbl-full {
     width: 100%;
-    
+
 }
-.tbl-30{
+
+.tbl-30 {
     pad: 1dp;
     width: 40%;
 }
-.org-color{
+
+.org-color {
     color: #ff7f50;
     font-weight: bold;
 }
 
-.success{
+.success {
     color: #5352ed;
     font-weight: bold;
 }
-.error{
+
+.error {
     color: #ff7f50;
 }
 
@@ -47,50 +50,55 @@ table tr th {
     padding: 1%;
     text-align: left;
 }
+
 table tr td {
     padding: 1%;
     text-align: left;
 }
 
 
-.btn-primary{
-    
+.btn-primary {
+
     background-color: #3290e2;
     padding: 1%;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: blue;
     color: white;
 }
-.btn-secondary{
-    
-    background-color: #18e274;  
+
+.btn-secondary {
+
+    background-color: #18e274;
     padding: 1%;
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-.btn-secondary:hover{
-    color: white;
-    background-color:  #16b65f ;
-   
 }
 
-.btn-ter{
-    
-    background-color: #e90b0b;  
+.btn-secondary:hover {
+    color: white;
+    background-color: #16b65f;
+
+}
+
+.btn-ter {
+
+    background-color: #e90b0b;
     padding: 1%;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-.btn-ter:hover{
+
+.btn-ter:hover {
     color: white;
-    background-color:  #e51c1f ;
-   
+    background-color: #e51c1f;
+
 }
 
 
@@ -173,9 +181,35 @@ h3 {
 
 
 
-.login{
+.login {
 
     border: 1px solid navy;
     width: 25%;
     margin: 10% auto;
+}
+
+
+/* ataullha added */
+.tbl-adopt {
+
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn_update {
+    height: 5px;
+    line-height: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    width: 50px;
+    padding: 15px;
+    background-color: #18e274;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+.btn_update:hover{
+    color: #fff;
+    background-color: #16b65f;
 }
